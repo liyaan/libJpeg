@@ -5,7 +5,8 @@ add_library( native-lib
              native-lib.cpp )
 
 add_library(libjpeg STATIC IMPORTED)
-set_target_properties(libjpeg PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/x86/libturbojpeg.a)
+#set_target_properties(libjpeg PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/x86/libturbojpeg.a)
+set_target_properties(libjpeg PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libs/armeabi-v7a/libturbojpeg.a)
 include_directories(include)
 target_link_libraries(  native-lib
         libjpeg

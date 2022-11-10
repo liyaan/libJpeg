@@ -18,9 +18,13 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags ""
-                abiFilters "x86"
+                abiFilters "armeabi-v7a"
+//                abiFilters "x86"
                 arguments '-DANDROID_PLATFORM=android-24'
             }
+        }
+        ndk {
+            abiFilters  "armeabi-v7a"
         }
     }
 
